@@ -14,11 +14,18 @@
     header {
       background: #20232a;
       color: #61dafb;
-      padding: 20px;
+      padding: 30px 20px;
       text-align: center;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 5px 0;
+    }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 30px auto;
       padding: 0 20px;
     }
@@ -26,24 +33,36 @@
       color: #20232a;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
-    }
-    a {
-      color: #007acc;
-      text-decoration: none;
+      margin-bottom: 15px;
     }
     .project {
       background: white;
-      padding: 15px;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #e67e22;
+    }
+    .project p {
+      margin: 5px 0;
+    }
+    .project a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
     }
     footer {
       background: #20232a;
       color: #ccc;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 50px;
+    }
+    .skills p {
+      margin: 5px 0;
     }
   </style>
 </head>
@@ -53,8 +72,8 @@
     <img src="profile.jpg" alt="Yusuf Dirawi" style="border-radius: 50%; width: 120px; height: 120px; margin-top: 10px;">
     <p>Computer Engineering Student | Aspiring Software & Data Engineer</p>
     <p>
-      <a href="https://github.com/yuss93">GitHub</a> |
-      <a href="https://www.linkedin.com/in/yusuf-dirawi-06a49a115">LinkedIn</a> |
+      <a href="https://github.com/yuss93" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/yusuf-dirawi-06a49a115" target="_blank">LinkedIn</a> |
       <a href="mailto:yousifaldirawi@gmail.com">Email</a>
     </p>
   </header>
@@ -62,71 +81,56 @@
   <section>
     <h2>About Me</h2>
     <p>
-      I'm a Computer Engineering student at The City College of New York with a strong foundation in C++, Python, and SQL.
-      I enjoy solving problems and building real-world projects. I'm currently seeking internship opportunities in software development, data analytics, and engineering.
+      I'm a Computer Engineering student at The City College of New York with a strong foundation in Python, C++, and web development. 
+      I enjoy solving real-world problems, building projects, and applying analytical skills to software and data solutions.
+      Currently seeking internship opportunities in software engineering, web development, and backend systems.
     </p>
   </section>
 
   <section>
-  <h2>Projects</h2>
+    <h2>Projects</h2>
 
-  <div class="project">
-    <h3>✅ Task Tracker Web App (Flask)</h3>
-    <p>
-      A full-stack task management web application built with Flask and SQLite. 
-      Includes user authentication (signup/login), task creation and completion toggling, 
-      dynamic progress tracking with a color-coded progress bar, and a responsive UI using HTML/CSS.
-    </p>
-    <p>
-      <strong>Tech Stack:</strong> Python, Flask, SQLite, HTML, CSS, Flask-Login
-    </p>
-    <p>
-      <a href="https://github.com/yuss93/task-tracker-flask" target="_blank">View on GitHub</a>
-    </p>
-  </div>
+    <div class="project">
+      <h3>🍳 ChefAI – AI-Powered Recipe Generator</h3>
+      <p>Full-stack web app that dynamically generates recipes using user input. Integrated with Vertex AI for context-aware recipe creation and image generation.</p>
+      <p><strong>Tech Stack:</strong> Python, FastAPI, Flask, Vertex AI, HTML, CSS, JavaScript</p>
+      <p><a href="https://github.com/yuss93/chefai" target="_blank">View on GitHub</a></p>
+    </div>
 
-  <div class="project">
-    <h3>🕹️ Word-Based Adventure Game (C++)</h3>
-    <p>
-      A multi-room terminal game with mini-games such as puzzles, rock-paper-scissors, and math challenges. 
-      Built using object-oriented programming principles in C++.
-    </p>
-    <p>
-      <strong>Tech Stack:</strong> C++
-    </p>
-    <p>
-      <a href="https://github.com/yuss93/word-game-cpp" target="_blank">View on GitHub</a>
-    </p>
-  </div>
+    <div class="project">
+      <h3>✅ Task Tracker Web App (Flask)</h3>
+      <p>Full-stack task management app with user authentication, session handling, and progress tracking.</p>
+      <p><strong>Tech Stack:</strong> Python, Flask, SQLite, HTML, CSS</p>
+      <p><a href="https://github.com/yuss93/task-tracker-flask" target="_blank">View on GitHub</a></p>
+    </div>
 
-  <div class="project">
-    <h3>📊 Python Data Analysis (Coming Soon)</h3>
-    <p>
-      An exploratory data analysis project using Pandas and NumPy to identify customer behavior patterns 
-      and visualize trends through graphs and summaries.
-    </p>
-    <p>
-      <strong>Tech Stack:</strong> Python, Pandas, NumPy, Matplotlib
-    </p>
-    <p>
-      <a href="#">View on GitHub (Coming Soon)</a>
-    </p>
-  </div>
-</section>
+    <div class="project">
+      <h3>🕹️ Word-Based Adventure Game (C++)</h3>
+      <p>Console-based adventure game using OOP, multiple classes, and unique game scenarios to enhance engagement.</p>
+      <p><strong>Tech Stack:</strong> C++</p>
+      <p><a href="https://github.com/yuss93/word-game-cpp" target="_blank">View on GitHub</a></p>
+    </div>
+
+    <div class="project">
+      <h3>🔧 Electronics / Hardware Projects</h3>
+      <p>Digital clock and microphone-to-radio audio transmission system using counters, decoders, modulation circuits, and signal processing techniques.</p>
+      <p><strong>Tech Stack:</strong> Electronics, ICs, Breadboard, Signal Processing</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <p><strong>Programming Languages:</strong> Python, C++, JavaScript, HTML, CSS</p>
+    <p><strong>Frameworks & Tools:</strong> Flask, FastAPI, Git, GitHub, SQLite</p>
+    <p><strong>Technical Skills:</strong> Data Structures & Algorithms, REST API Development, Web App Development, Data Analysis</p>
+    <p><strong>Development Practices:</strong> Problem Solving, Debugging, Version Control, Team Collaboration, Strong Communication</p>
+    <p><strong>Languages:</strong> Arabic</p>
+  </section>
 
   <section>
-  <h2>Skills</h2>
-  <p><strong>Languages:</strong> C++, Python, SQL</p>
-  <p><strong>Web:</strong> HTML, CSS, Flask</p>
-  <p><strong>Tools:</strong> Git, GitHub, VS Code, SQLite, Excel, MATLAB</p>
-  <p><strong>Soft Skills:</strong> Teamwork, Communication, Problem Solving, Self-Motivated</p>
-</section>
-
-
-  <section>
-  <h2>Resume</h2>
-  <p><a href="Yusuf_Dirawi_Resume.pdf" target="_blank" download>Download Resume (PDF)</a></p>
-</section>
+    <h2>Resume</h2>
+    <p><a href="Yusuf_Dirawi_Resume.pdf" target="_blank" download>Download Resume (PDF)</a></p>
+  </section>
 
   <footer>
     <p>© 2025 Yusuf Dirawi | Built with HTML & ❤️ | Hosted on GitHub Pages</p>
