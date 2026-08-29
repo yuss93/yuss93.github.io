@@ -7,7 +7,7 @@
 
   <!-- LinkedIn / Social Preview -->
   <meta property="og:title" content="Yusuf Dirawi | Computer Engineering Portfolio" />
-  <meta property="og:description" content="Computer Engineering student at CCNY — Python, C++, CUDA, VHDL. Building software, hardware, and AI projects." />
+  <meta property="og:description" content="Computer Engineering student at CCNY — React, Python, C++, CUDA, VHDL. Building full-stack apps, AI integrations, and hardware." />
   <meta name="image" property="og:image" content="https://yuss93.github.io/preview.png">
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://yuss93.github.io/preview.png" />
-  <meta name="description" content="Computer Engineering student at CCNY — Python, C++, CUDA, VHDL. Building software, hardware, and AI projects." />
+  <meta name="description" content="Computer Engineering student at CCNY — React, Python, C++, CUDA, VHDL. Building full-stack apps, AI integrations, and hardware." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -355,6 +355,12 @@
       letter-spacing: 0.05em;
     }
 
+    .project-links {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
     .project-link {
       font-family: 'Space Mono', monospace;
       font-size: 0.72rem;
@@ -377,6 +383,20 @@
       background: rgba(124,58,237,0.15);
       border: 1px solid rgba(124,58,237,0.3);
       color: #a78bfa;
+      border-radius: 2px;
+      letter-spacing: 0.1em;
+    }
+
+    .live-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      padding: 0.2rem 0.5rem;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.3);
+      color: var(--accent);
       border-radius: 2px;
       letter-spacing: 0.1em;
     }
@@ -537,6 +557,12 @@
       transform: translateY(0);
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .fade-up { opacity: 1; transform: none; transition: none; }
+      .hero-content { animation: none; }
+    }
+
     /* RESPONSIVE */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
@@ -569,13 +595,13 @@
       <div class="hero-tag">Computer Engineering @ CCNY</div>
       <h1>Yusuf<br /><span>Dirawi</span></h1>
       <p class="hero-sub">
-        Building at the intersection of software and hardware —
-        Python, C++, CUDA, VHDL. Full-stack apps, GPU computing,
-        and transistor-level circuit design.
+        Full-stack developer and computer engineer — React on the front,
+        Python and Flask on the back, C++ and VHDL closer to the metal.
+        Eleven projects built, five of them live.
       </p>
       <div class="hero-links">
-        <a href="https://yuss93.github.io/react-portfolio" class="btn btn-outline" target="_blank">React Portfolio</a>
         <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://yuss93.github.io/react-portfolio" class="btn btn-outline" target="_blank">React Portfolio</a>
         <a href="https://yuss93.github.io/Yusuf_Dirawi_Resume.pdf" class="btn btn-outline" target="_blank">Download Resume</a>
         <a href="https://github.com/yuss93" class="btn btn-outline" target="_blank">GitHub</a>
       </div>
@@ -593,21 +619,25 @@
       <div class="about-text">
         <p>
           I'm a <strong>Computer Engineering student at The City College of New York</strong>
-          (GPA: 3.82) with hands-on experience across both software and hardware engineering.
+          (GPA: 3.82) with hands-on experience across the full stack and down into hardware.
         </p>
         <p>
-          On the <strong>software side</strong>, I build full-stack web applications using Python,
-          Flask, FastAPI, and JavaScript — and have deployed AI-powered apps integrating
-          Google Vertex AI into production.
+          On the <strong>front end</strong>, I build with React — component composition,
+          hooks, Context, reducers, and tested forms — most recently completing Meta's
+          Advanced React course and shipping a React portfolio with a live contact backend.
         </p>
         <p>
-          On the <strong>hardware side</strong>, I design circuits at the transistor level using
-          Electric EDA, work with VHDL and ModelSim for digital design, and am currently
-          developing GPU-accelerated data science applications with NVIDIA CUDA as part of
-          my Senior Design capstone.
+          On the <strong>back end</strong>, I work in Python with Flask and FastAPI,
+          have deployed AI-powered apps integrating Google Vertex AI into production,
+          and handle auth, sessions, and SQL persistence.
         </p>
         <p>
-          I'm actively seeking internships in <strong>software engineering,
+          On the <strong>hardware side</strong>, I design circuits at the transistor level
+          using Electric EDA, work with VHDL and ModelSim for digital design, and have
+          optimized numerical kernels with ARM NEON SIMD for roughly 3× speedups.
+        </p>
+        <p>
+          I'm actively seeking internships and full-time roles in <strong>software engineering,
           hardware/embedded systems, or AI/ML</strong> — where I can contribute real
           engineering work from day one.
         </p>
@@ -618,7 +648,7 @@
           <div class="stat-label">GPA @ CCNY</div>
         </div>
         <div class="stat">
-          <div class="stat-num">7</div>
+          <div class="stat-num">11</div>
           <div class="stat-label">Projects Built</div>
         </div>
         <div class="stat">
@@ -626,8 +656,8 @@
           <div class="stat-label">GPA @ LaGuardia</div>
         </div>
         <div class="stat">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Degrees Earned</div>
+          <div class="stat-num">5</div>
+          <div class="stat-label">Live Deployments</div>
         </div>
       </div>
     </div>
@@ -643,20 +673,24 @@
 
       <div class="project-card fade-up">
         <span class="featured-badge">FEATURED</span>
-        <div class="project-emoji">⚡</div>
-        <div class="project-title">Senior Design — GPU-Accelerated Data Science</div>
+        <div class="project-emoji">⚛️</div>
+        <div class="project-title">React Portfolio</div>
         <p class="project-desc">
-          Two-semester capstone at CCNY under Prof. Jianting Zhang. Developing
-          GPU-accelerated data science applications with NVIDIA CUDA to harness
-          massively parallel computing for large-scale data analysis.
+          Single-page developer portfolio built with React and Chakra UI. Scroll-direction
+          driven header, smooth-scrolling navigation, a data-driven project grid, and a
+          contact form with Formik and Yup schema validation wired to a live form backend.
         </p>
         <div class="project-tags">
-          <span class="tag">CUDA</span>
-          <span class="tag">C++</span>
-          <span class="tag">GPU Computing</span>
-          <span class="tag">Parallel Processing</span>
+          <span class="tag">React</span>
+          <span class="tag">Chakra UI</span>
+          <span class="tag">Formik</span>
+          <span class="tag">Yup</span>
+          <span class="tag">Hooks</span>
         </div>
-        <a href="https://github.com/yuss93" class="project-link">GitHub →</a>
+        <div class="project-links">
+          <a href="https://yuss93.github.io/react-portfolio" class="project-link" target="_blank">Live Demo →</a>
+          <a href="https://github.com/yuss93/react-portfolio" class="project-link" target="_blank">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card fade-up">
@@ -676,7 +710,10 @@
           <span class="tag">Web Audio</span>
           <span class="tag">HTML/CSS</span>
         </div>
-        <a href="https://github.com/yuss93" class="project-link">GitHub →</a>
+        <div class="project-links">
+          <a href="https://yuss93.github.io/mansion-of-destiny/" class="project-link" target="_blank">Live Demo →</a>
+          <a href="https://github.com/yuss93/mansion-of-destiny" class="project-link" target="_blank">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card fade-up">
@@ -685,7 +722,8 @@
         <p class="project-desc">
           Generates professional recipes dynamically based on dish description
           and time constraints. Integrates Google Vertex AI for AI-powered image
-          generation and recipe content. Full-stack deployment with FastAPI backend.
+          generation and recipe content, producing valid output on roughly 90% of
+          test prompts. Full-stack deployment with FastAPI backend.
         </p>
         <div class="project-tags">
           <span class="tag">Python</span>
@@ -694,7 +732,28 @@
           <span class="tag">Vertex AI</span>
           <span class="tag">JavaScript</span>
         </div>
-        <a href="https://github.com/yuss93/CHEF-AI" class="project-link">GitHub →</a>
+        <div class="project-links">
+          <a href="https://github.com/yuss93/CHEF-AI" class="project-link" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-emoji">🎬</div>
+        <div class="project-title">Movie Discovery App</div>
+        <p class="project-desc">
+          React application built on the TMDB API with live search, client-side routing
+          between views, and a favorites list managed through Context so any component
+          can read or update it without prop drilling.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Context API</span>
+          <span class="tag">React Router</span>
+          <span class="tag">REST API</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/yuss93/movie-app" class="project-link" target="_blank">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card fade-up">
@@ -712,7 +771,86 @@
           <span class="tag">Flask-Login</span>
           <span class="tag">HTML/CSS</span>
         </div>
-        <a href="https://github.com/yuss93/task-tracker-flask" class="project-link">GitHub →</a>
+        <div class="project-links">
+          <a href="https://github.com/yuss93/task-tracker-flask" class="project-link" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <span class="live-badge">LIVE</span>
+        <div class="project-emoji">🟩</div>
+        <div class="project-title">Wordle</div>
+        <p class="project-desc">
+          The word-guessing game rebuilt from scratch with vanilla JavaScript, HTML
+          and CSS — keyboard input handling, per-letter state feedback, and win/loss
+          resolution, with no framework or build step.
+        </p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">DOM</span>
+          <span class="tag">Game Logic</span>
+        </div>
+        <div class="project-links">
+          <a href="https://yuss93.github.io/wordle/" class="project-link" target="_blank">Live Demo →</a>
+          <a href="https://github.com/yuss93/wordle" class="project-link" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <span class="live-badge">LIVE</span>
+        <div class="project-emoji">💸</div>
+        <div class="project-title">Split Bill</div>
+        <p class="project-desc">
+          Bill-splitting tool that divides a total equally or by custom per-person
+          amounts, recalculating live as values change. Built with vanilla JavaScript
+          and deployed on GitHub Pages.
+        </p>
+        <div class="project-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">DOM</span>
+        </div>
+        <div class="project-links">
+          <a href="https://yuss93.github.io/split-bill/" class="project-link" target="_blank">Live Demo →</a>
+          <a href="https://github.com/yuss93/split-bill" class="project-link" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-emoji">🧮</div>
+        <div class="project-title">React Calculator</div>
+        <p class="project-desc">
+          Running-total calculator built with React and Vite. Applies arithmetic
+          operations to an accumulated result with controlled inputs, guarded
+          division, and independent resets for result and input state.
+        </p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">useState</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/yuss93/calculator-app" class="project-link" target="_blank">GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-up">
+        <div class="project-emoji">🎮</div>
+        <div class="project-title">Word-Based Adventure Game — C++</div>
+        <p class="project-desc">
+          Terminal-based multi-room game featuring puzzles, mini-games, and
+          interactive scenarios. Built with object-oriented design patterns
+          in C++ — classes, inheritance, file I/O, and dynamic memory.
+        </p>
+        <div class="project-tags">
+          <span class="tag">C++</span>
+          <span class="tag">OOP</span>
+          <span class="tag">Game Logic</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/yuss93/word-game-cpp" class="project-link" target="_blank">GitHub →</a>
+        </div>
       </div>
 
       <div class="project-card fade-up">
@@ -732,19 +870,20 @@
       </div>
 
       <div class="project-card fade-up">
-        <div class="project-emoji">🎮</div>
-        <div class="project-title">Word-Based Adventure Game — C++</div>
+        <div class="project-emoji">⚡</div>
+        <div class="project-title">ARM NEON SIMD Optimization</div>
         <p class="project-desc">
-          Terminal-based multi-room game featuring puzzles, mini-games, and
-          interactive scenarios. Built with object-oriented design patterns
-          in C++ — classes, inheritance, file I/O, and dynamic memory.
+          Hand-vectorized dot product and matrix multiply kernels using ARM NEON
+          SIMD intrinsics, achieving roughly 3× speedup on Apple M2. Benchmarked
+          across M2 and Raspberry Pi 4B, reaching about 20× with vectorization
+          and compiler optimization combined.
         </p>
         <div class="project-tags">
           <span class="tag">C++</span>
-          <span class="tag">OOP</span>
-          <span class="tag">Game Logic</span>
+          <span class="tag">ARM NEON</span>
+          <span class="tag">SIMD</span>
+          <span class="tag">Benchmarking</span>
         </div>
-        <a href="https://github.com/yuss93/word-game-cpp" class="project-link">GitHub →</a>
       </div>
 
       <div class="project-card fade-up">
@@ -776,16 +915,27 @@
       <div class="skill-group">
         <div class="skill-group-title">Languages</div>
         <div class="skill-list">
+          <span class="skill-item">JavaScript</span>
           <span class="skill-item">Python</span>
           <span class="skill-item">C++</span>
-          <span class="skill-item">JavaScript</span>
           <span class="skill-item">VHDL</span>
           <span class="skill-item">HTML / CSS</span>
           <span class="skill-item">SQL</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Frameworks & Backend</div>
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-list">
+          <span class="skill-item">React</span>
+          <span class="skill-item">Hooks & Context</span>
+          <span class="skill-item">useReducer</span>
+          <span class="skill-item">Chakra UI</span>
+          <span class="skill-item">Formik / Yup</span>
+          <span class="skill-item">Jest / Testing Library</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
         <div class="skill-list">
           <span class="skill-item">Flask</span>
           <span class="skill-item">FastAPI</span>
@@ -806,8 +956,9 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">GPU & AI</div>
+        <div class="skill-group-title">Performance & AI</div>
         <div class="skill-list">
+          <span class="skill-item">ARM NEON SIMD</span>
           <span class="skill-item">NVIDIA CUDA</span>
           <span class="skill-item">Parallel Computing</span>
           <span class="skill-item">Google Vertex AI</span>
@@ -818,6 +969,8 @@
         <div class="skill-group-title">Tools & Platforms</div>
         <div class="skill-list">
           <span class="skill-item">Git / GitHub</span>
+          <span class="skill-item">Vite</span>
+          <span class="skill-item">npm</span>
           <span class="skill-item">Linux</span>
           <span class="skill-item">VS Code</span>
           <span class="skill-item">MATLAB</span>
@@ -853,8 +1006,24 @@
       </div>
       <div class="edu-card">
         <div>
+          <div class="edu-school">WWT AI & Network Pathway Program</div>
+          <div class="edu-degree">Selected participant — CCNY Career and Professional Development Institute</div>
+          <div class="edu-detail">Semester-long program · WWT Virtual Lab access · hands-on AI and networking modules</div>
+        </div>
+        <div class="edu-date">Fall 2026</div>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-school">Meta Front-End Developer Program</div>
+          <div class="edu-degree">Professional Certificate coursework — Coursera</div>
+          <div class="edu-detail">React Basics · Advanced React · HTML & CSS · JavaScript · Version Control</div>
+        </div>
+        <div class="edu-date">2026 — Present</div>
+      </div>
+      <div class="edu-card">
+        <div>
           <div class="edu-school">LaGuardia Community College</div>
-          <div class="edu-degree">Associate of Science, Electrical & Electronics Engineering</div>
+          <div class="edu-degree">Associate of Science, Electrical &amp; Electronics Engineering</div>
           <div class="edu-detail">GPA: 3.97 · Dean's List · Phi Theta Kappa Honor Society</div>
         </div>
         <div class="edu-date">Sep 2022 — Jun 2024</div>
@@ -868,14 +1037,14 @@
       <div class="section-label" style="justify-content:center;display:flex;margin-bottom:0.75rem">05 — Contact</div>
       <h2 class="contact-title">Let's Connect</h2>
       <p class="contact-sub">
-        Open to internship opportunities in software, hardware, and AI/ML.<br />
+        Open to internships and full-time roles in software, hardware, and AI/ML.<br />
         Reach out — I respond fast.
       </p>
       <div class="contact-links">
-        <a href="https://yuss93.github.io/react-portfolio" class="btn btn-outline" target="_blank">React Portfolio</a>
         <a href="mailto:yousifaldirawi@gmail.com" class="btn btn-primary">Email Me</a>
         <a href="https://www.linkedin.com/in/yusuf-dirawi/" class="btn btn-outline" target="_blank">LinkedIn</a>
         <a href="https://github.com/yuss93" class="btn btn-outline" target="_blank">GitHub</a>
+        <a href="https://yuss93.github.io/react-portfolio" class="btn btn-outline" target="_blank">React Portfolio</a>
         <a href="https://yuss93.github.io/Yusuf_Dirawi_Resume.pdf" class="btn btn-outline" target="_blank">Resume</a>
       </div>
     </div>
